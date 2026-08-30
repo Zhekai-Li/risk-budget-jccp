@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Accepted optimized-allocation results that provide the primary positive evidence.}
+\label{tab:positive_results}
+\begin{tabularx}{\linewidth}{llrrrrr}
+\toprule
+Case & Cert. & Gain (pct.) & Calib. JVP & Held-out JVP & Max budget share & Entropy \\
+\midrule
+M5 & Cantelli & 5.0 & 0.000 & 0.000 & 0.019 & 0.987 \\
+Power & Bernstein & 2.3 & 0.010 & 0.063 & 0.908 & 0.126 \\
+French & CVaR & 7.9 & 0.015 & 0.048 & 0.540 & 0.177 \\
+French & Bernstein & 13.6 & 0.025 & 0.075 & 0.127 & 0.556 \\
+\bottomrule
+\end{tabularx}
+\vspace{2pt}
+\begin{minipage}{.98\linewidth}
+\footnotesize \textit{Note.} Calib. JVP and Held-out JVP are empirical joint violation probabilities. Max budget share is the largest optimized scalar budget divided by the total budget used. Entropy is normalized budget entropy, with smaller values indicating more concentrated allocations.
+\end{minipage}
+\end{table}

@@ -1,0 +1,36 @@
+alpha: 0.05
+base_seed: 7
+replications: 30
+# These are controlled synthetic configurations with application-motivated
+# labels. They are not additional real-data experiments.
+domains:
+  - domain: service_capacity
+    label: Service capacity
+    method: bernstein
+    m: 100
+    heterogeneity: 1.0
+    seed_offset: 0
+  - domain: retail_inventory
+    label: Retail inventory
+    method: cvar
+    m: 100
+    heterogeneity: 1.0
+    seed_offset: 1000
+  - domain: portfolio_margins
+    label: Portfolio margins
+    method: cvar
+    m: 80
+    heterogeneity: 1.0
+    seed_offset: 2000
+  - domain: power_dispatch_reserves
+    label: Power dispatch reserves
+    method: bernstein
+    m: 120
+    heterogeneity: 1.0
+    seed_offset: 3000
+  - domain: healthcare_staffing
+    label: Healthcare staffing
+    method: cantelli
+    m: 60
+    heterogeneity: 1.0
+    seed_offset: 4000

@@ -1,0 +1,4 @@
+case,recommended_main_profile,recommendation
+french,current_main,keep_current_main
+m5,m5_stable_180d,candidate_can_be_promoted_after_manual_review
+power,power_original_balanced,candidate_can_be_promoted_after_manual_review

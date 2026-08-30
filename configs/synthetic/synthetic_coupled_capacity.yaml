@@ -1,0 +1,12 @@
+alpha: 0.05
+seed: 7
+dimension: 5
+num_constraints: 12
+demand_level: 1.0
+sigma_scale: 1.0
+heterogeneity_values: [0.0, 0.5, 1.0, 1.5]
+solver:
+  max_iter: 25
+  tol: 1.0e-4
+  eps_alpha: 1.0e-6
+  eps_theta: 1.0e-6

@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying paper."
+title: "Optimized Risk-Budget Allocation for Safe Approximations of Joint Chance Constraints"
+type: software
+version: 0.1.0
+date-released: 2026-08-29
+license: MIT
+authors:
+  - family-names: Jiang
+    given-names: Chonghe
+  - family-names: Li
+    given-names: Zhekai
+repository-code: "https://github.com/Zhekai-Li/risk-budget-jccp"
+preferred-citation:
+  type: article
+  title: "Optimized Risk-Budget Allocation for Safe Approximations of Joint Chance Constraints"
+  authors:
+    - family-names: Jiang
+      given-names: Chonghe
+    - family-names: Li
+      given-names: Zhekai

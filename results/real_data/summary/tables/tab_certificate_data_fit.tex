@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Certificate assumptions and empirical data regimes. The table records modeling fit only; case-level conclusions are discussed in the text.}
+\label{tab:certificate_fit}
+\begin{tabularx}{\linewidth}{lYYY}
+\toprule
+Certificate & Modeling signal & Best matched setting & Main caveat \\
+\midrule
+CVaR & Empirical finite-scenario tail information & Heavy-tailed returns and empirical demand tails & Sensitive to calibration-to-held-out drift \\
+Bernstein & Moment or sub-Gaussian light-tail control & Thin-tailed Power residuals & Mismatched to zero-inflated, spiky count demand and regime-shifted tails \\
+Cantelli & Distribution-free one-sided moment bound & Safety-first audits with limited tail assumptions & Often conservative, costly, or infeasible with many tight constraints \\
+\bottomrule
+\end{tabularx}
+\vspace{2pt}
+\begin{minipage}{.98\linewidth}
+\footnotesize \textit{Note.} The modeling signal column identifies the distributional information used by the scalar certificate. The best-matched setting and caveat summarize expected fit before inspecting held-out performance.
+\end{minipage}
+\end{table}

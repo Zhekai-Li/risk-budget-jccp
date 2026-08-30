@@ -1,0 +1,6 @@
+alpha: 0.05
+base_seed: 7
+m_values: [20, 50, 100]
+heterogeneity_values: [0.0, 0.5, 1.0, 1.5]
+methods: [bernstein, cantelli, cvar]
+replications: 30

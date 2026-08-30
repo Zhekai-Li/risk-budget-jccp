@@ -1,0 +1,62 @@
+alpha: 0.05
+profile: mac_m4
+random_seed: 20260525
+profiles:
+  mac_m4:
+    m5:
+      n_series: 150
+      max_train_days: 730
+      max_test_days: 365
+      min_active_days: 120
+      selection_metric: revenue_mean
+      selection_policy: stratified_revenue_cv_category_store
+      max_category_share: 0.55
+      revenue_quantile_bins: 3
+      cv_quantile_bins: 3
+      stability_filter: true
+      min_calibration_mean_ratio: 0.25
+      max_calibration_mean_ratio: 4.0
+      max_calibration_zero_rate_shift: 0.60
+      cost_proxy: median_sell_price
+    power:
+      n_snapshots: 3
+      max_branches: 3
+      max_train_scenarios: 100
+      max_test_scenarios: 300
+      use_external_wind_solar_api: true
+      fallback_to_rts_builtin: true
+      primary_rating: ste
+      sensitivity_ratings: [ste]
+      report_continuous_overload: true
+      allow_nominal_cont_overload: true
+      flag_nominal_lte_overload: true
+      snapshot_selection_policy: forecast_representative_diverse
+      branch_selection_policy: stratified_tier_volatility
+      risk_tier_policy: next_available_rating
+      risk_limit_gamma_grid: [0.0, 0.25, 0.5, 0.75, 0.875, 1.0]
+      target_calibration_joint_violation: 0.15
+      calibration_joint_violation_band: [0.05, 0.30]
+      random_seed: 20260525
+      tier_margin: 0.02
+      near_cont_threshold: 0.80
+      exclude_above_ste: true
+    french:
+      max_assets: 49
+      max_train_scenarios: 1500
+      max_test_scenarios: 1000
+      max_weight: 0.12
+      target_return_fraction: 0.60
+      start_date: "2010-01-01"
+      train_end_date: "2018-12-31"
+      test_start_date: "2019-01-01"
+      test_end_date: "2024-12-31"
+      asset_selection_policy: standard_49_industries
+      heldout_policy: first_after_split
+    dca:
+      max_iter: 25
+      tol: 1.0e-4
+      proximal_weight: 1.0e-4
+      min_alpha: 1.0e-8
+      feasibility_tol: 1.0e-6
+      certificate_accept_tol: 1.0e-4
+      certificate_strict_tol: 1.0e-6

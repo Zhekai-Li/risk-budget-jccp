@@ -1,0 +1,24 @@
+\begin{tabular}{lllllrrrrrrrrrrlr}
+\toprule
+case & certificate & allocation & result\_status & solver\_status & fallback\_used & sum\_alpha & certificate\_residual\_max & budget\_residual & feasibility\_residual & certificate\_accept\_tol & calibration\_max\_violation\_tolerance & calibration\_joint\_violation & calibration\_jvp\_bound\_applies & calibration\_jvp\_within\_budget & calibration\_jvp\_contract & heldout\_joint\_violation \\
+\midrule
+m5 & cvar & equal & success & optimal & False & 0.050000 & 0.000000 & 0.000000 & 0.000000 & 0.000100 & 0.000600 & 0.000000 & True & True & finite\_sample\_cvar\_bound\_observed & 0.342500 \\
+m5 & cvar & optimized & success & separable\_cvar\_allocation:Optimization terminated successfully & False & 0.050000 & 0.000000 & 0.000000 & 0.000000 & 0.000100 & 0.000600 & 0.013700 & True & True & finite\_sample\_cvar\_bound\_observed & 0.353400 \\
+m5 & bernstein & equal & success & optimal & False & 0.050000 & 0.000000 & 0.000000 & 0.000000 & 0.000100 & 0.000600 & 0.717800 & False & False & not\_implied\_by\_moment\_certificate & 0.884900 \\
+m5 & bernstein & optimized & fallback\_equal & bernstein\_optimized\_fallback\_equal\_feasible:dca\_candidate\_feasibility=0.955422 & True & 0.050000 & 0.000000 & 0.000000 & 0.000000 & 0.000100 & 0.000600 & 0.717800 & False & False & not\_implied\_by\_moment\_certificate & 0.884900 \\
+m5 & cantelli & equal & success & closed\_form\_fixed\_alpha & False & 0.050000 & 0.000000 & 0.000000 & 0.000000 & 0.000100 & 0.003000 & 0.000000 & False & True & not\_implied\_by\_moment\_certificate & 0.000000 \\
+m5 & cantelli & optimized & success & separable\_cantelli\_budget\_bisection & False & 0.050000 & 0.000000 & 0.000000 & 0.000000 & 0.000100 & 0.002000 & 0.000000 & False & True & not\_implied\_by\_moment\_certificate & 0.000000 \\
+power & cvar & equal & success & optimal & False & 0.050000 & 0.000000 & 0.000000 & 0.000000 & 0.000100 & 0.000000 & 0.010000 & True & True & finite\_sample\_cvar\_bound\_observed & 0.070000 \\
+power & cvar & optimized & fallback\_equal & cvar\_optimized\_fallback\_equal\_objective\_dominates:dca\_candidate\_objective=79638.3 & True & 0.050000 & 0.000000 & 0.000000 & 0.000000 & 0.000100 & 0.000000 & 0.010000 & True & True & finite\_sample\_cvar\_bound\_observed & 0.070000 \\
+power & bernstein & equal & success & optimal & False & 0.050000 & 0.000000 & 0.000000 & 0.000000 & 0.000100 & 0.000000 & 0.000000 & False & True & not\_implied\_by\_moment\_certificate & 0.050000 \\
+power & bernstein & optimized & success & optimal & False & 0.050000 & 0.000000 & 0.000000 & 0.000000 & 0.000100 & 0.000000 & 0.010000 & False & True & not\_implied\_by\_moment\_certificate & 0.063300 \\
+power & cantelli & equal & infeasible & failed\_solver\_failed:CLARABEL: status=infeasible | ECOS: status=infeasible | SCS: status=infeasible & False & 0.050000 & inf & 0.000000 & inf & 0.000100 & 0.000000 & 0.130000 & False & False & not\_applicable\_certificate\_not\_accepted & 0.073300 \\
+power & cantelli & optimized & failed & failed\_equal\_warm\_start\_invalid & False & 0.050000 & inf & 0.000000 & inf & 0.000100 & 0.000000 & 0.130000 & False & False & not\_applicable\_certificate\_not\_accepted & 0.073300 \\
+french & cvar & equal & success & separable\_cvar\_fixed\_alpha\_lp & False & 0.050000 & 0.000000 & 0.000000 & 0.000000 & 0.000100 & 0.000000 & 0.004700 & True & True & finite\_sample\_cvar\_bound\_observed & 0.025000 \\
+french & cvar & optimized & success & separable\_cvar\_scipy\_slsqp & False & 0.050000 & 0.000000 & 0.000000 & 0.000000 & 0.000100 & 0.000000 & 0.014700 & True & True & finite\_sample\_cvar\_bound\_observed & 0.048000 \\
+french & bernstein & equal & success & optimal & False & 0.050000 & 0.000000 & 0.000000 & 0.000000 & 0.000100 & 0.000000 & 0.033300 & False & True & not\_implied\_by\_moment\_certificate & 0.106000 \\
+french & bernstein & optimized & success & optimal & False & 0.050000 & 0.000000 & 0.000000 & 0.000000 & 0.000100 & 0.000000 & 0.024700 & False & True & not\_implied\_by\_moment\_certificate & 0.075000 \\
+french & cantelli & equal & success & optimal & False & 0.050000 & 0.000000 & 0.000000 & 0.000000 & 0.000100 & 0.000000 & 0.000000 & False & True & not\_implied\_by\_moment\_certificate & 0.000000 \\
+french & cantelli & optimized & fallback\_equal & cantelli\_optimized\_fallback\_equal\_feasible:Optimization terminated successfully;fallback\_budget\_used=0.00918367 & True & 0.050000 & 0.000000 & 0.000000 & 0.000000 & 0.000100 & 0.000000 & 0.000000 & False & True & not\_implied\_by\_moment\_certificate & 0.000000 \\
+\bottomrule
+\end{tabular}

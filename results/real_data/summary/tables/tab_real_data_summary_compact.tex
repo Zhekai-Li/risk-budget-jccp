@@ -1,0 +1,24 @@
+\begin{tabular}{llllllll}
+\toprule
+Case & Cert. & Alloc. & Obj. & Gain (pct.) & Calib. JVP & Held-out JVP & Certificate / calibration status \\
+\midrule
+M5 & CVaR & equal & 21867.679 & 0.0 & 0.000 & 0.342 & certificate accepted; same-sample CVaR JVP bound verified \\
+M5 & CVaR & optimized & 20833.942 & 4.7 & 0.014 & 0.353 & certificate accepted; same-sample CVaR JVP bound verified \\
+M5 & bernstein & equal & 10898.510 & 0.0 & 0.718 & 0.885 & certificate accepted; empirical calibration JVP not implied \\
+M5 & bernstein & optimized & 10898.510 & 0.0 & 0.718 & 0.885 & fallback to equal; not\_implied\_by\_moment\_certificate \\
+M5 & cantelli & equal & 135145.061 & 0.0 & 0.000 & 0.000 & certificate accepted; empirical calibration JVP not implied \\
+M5 & cantelli & optimized & 128397.550 & 5.0 & 0.000 & 0.000 & certificate accepted; empirical calibration JVP not implied \\
+POWER & CVaR & equal & 79638.244 & 0.0 & 0.010 & 0.070 & certificate accepted; same-sample CVaR JVP bound verified \\
+POWER & CVaR & optimized & 79638.244 & 0.0 & 0.010 & 0.070 & fallback to equal; finite\_sample\_cvar\_bound\_observed \\
+POWER & bernstein & equal & 81351.894 & 0.0 & 0.000 & 0.050 & certificate accepted; empirical calibration JVP not implied \\
+POWER & bernstein & optimized & 79502.130 & 2.3 & 0.010 & 0.063 & certificate accepted; empirical calibration JVP not implied \\
+POWER & cantelli & equal & 78429.461 & 0.0 & 0.130 & 0.073 & not\_accepted; infeasible \\
+POWER & cantelli & optimized & 78429.461 & 0.0 & 0.130 & 0.073 & not\_accepted; failed \\
+FRENCH & CVaR & equal & 0.040 & 0.0 & 0.005 & 0.025 & certificate accepted; same-sample CVaR JVP bound verified \\
+FRENCH & CVaR & optimized & 0.037 & 7.9 & 0.015 & 0.048 & certificate accepted; same-sample CVaR JVP bound verified \\
+FRENCH & bernstein & equal & 0.031 & 0.0 & 0.033 & 0.106 & certificate accepted; empirical calibration JVP not implied \\
+FRENCH & bernstein & optimized & 0.027 & 13.6 & 0.025 & 0.075 & certificate accepted; empirical calibration JVP not implied \\
+FRENCH & cantelli & equal & 0.266 & 0.0 & 0.000 & 0.000 & certificate accepted; empirical calibration JVP not implied \\
+FRENCH & cantelli & optimized & 0.266 & 0.0 & 0.000 & 0.000 & fallback to equal; not\_implied\_by\_moment\_certificate \\
+\bottomrule
+\end{tabular}

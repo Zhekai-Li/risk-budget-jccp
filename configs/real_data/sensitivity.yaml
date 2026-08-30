@@ -1,0 +1,87 @@
+alpha: 0.05
+random_seed: 20260525
+sensitivity_profiles:
+  - name: m5_original_full_year
+    case: m5
+    profile: mac_m4
+    overrides:
+      m5:
+        max_test_days: 365
+        min_calibration_mean_ratio: 0.25
+        max_calibration_mean_ratio: 4.0
+        max_calibration_zero_rate_shift: 0.60
+  - name: m5_stable_180d
+    case: m5
+    profile: mac_m4
+    overrides:
+      m5:
+        max_test_days: 180
+        min_calibration_mean_ratio: 0.40
+        max_calibration_mean_ratio: 2.50
+        max_calibration_zero_rate_shift: 0.45
+  - name: m5_stable_90d
+    case: m5
+    profile: mac_m4
+    overrides:
+      m5:
+        max_test_days: 90
+        min_calibration_mean_ratio: 0.50
+        max_calibration_mean_ratio: 2.00
+        max_calibration_zero_rate_shift: 0.35
+  - name: power_original_balanced
+    case: power
+    profile: mac_m4
+    overrides:
+      power:
+        max_branches: 3
+        target_calibration_joint_violation: 0.15
+        calibration_joint_violation_band: [0.05, 0.30]
+  - name: power_cvar_active_balanced
+    case: power
+    profile: mac_m4
+    overrides:
+      power:
+        max_branches: 3
+        target_calibration_joint_violation: 0.20
+        calibration_joint_violation_band: [0.08, 0.35]
+        risk_limit_gamma_grid: [0.0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75]
+  - name: power_more_diverse_branches
+    case: power
+    profile: mac_m4
+    overrides:
+      power:
+        max_branches: 5
+        target_calibration_joint_violation: 0.18
+        calibration_joint_violation_band: [0.06, 0.32]
+  - name: french_main_2010_2024
+    case: french
+    profile: mac_m4
+    overrides:
+      french:
+        start_date: "2010-01-01"
+        train_end_date: "2018-12-31"
+        test_start_date: "2019-01-01"
+        test_end_date: "2024-12-31"
+        target_return_fraction: 0.60
+  - name: french_recent_2016_2024
+    case: french
+    profile: mac_m4
+    overrides:
+      french:
+        start_date: "2016-01-01"
+        train_end_date: "2020-12-31"
+        test_start_date: "2021-01-01"
+        test_end_date: "2024-12-31"
+        target_return_fraction: 0.60
+  - name: french_lower_target_return
+    case: french
+    profile: mac_m4
+    overrides:
+      french:
+        target_return_fraction: 0.40
+  - name: french_higher_target_return
+    case: french
+    profile: mac_m4
+    overrides:
+      french:
+        target_return_fraction: 0.80

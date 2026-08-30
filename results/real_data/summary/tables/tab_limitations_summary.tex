@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Negative and diagnostic results. These rows are reported as limitations rather than removed.}
+\label{tab:limitations}
+\begin{tabularx}{\linewidth}{lllXrrr}
+\toprule
+Case & Cert. & Status & Quality & Gain (pct.) & Calib. JVP & Held-out JVP \\
+\midrule
+M5 & CVaR & accepted & accepted gain, risk exceeds target & 4.7 & 0.014 & 0.353 \\
+M5 & Bernstein & fallback & certificate mismatch & 0.0 & 0.718 & 0.885 \\
+Power & CVaR & fallback & no accepted gain & 0.0 & 0.010 & 0.070 \\
+Power & Cantelli & failed & over-conservative & 0.0 & 0.130 & 0.073 \\
+French & Cantelli & fallback & over-conservative & 0.0 & 0.000 & 0.000 \\
+\bottomrule
+\end{tabularx}
+\vspace{2pt}
+\begin{minipage}{.98\linewidth}
+\footnotesize \textit{Note.} Quality identifies why the optimized row is not counted as primary positive evidence. Fallback rows report the accepted equal-allocation solution when the optimized candidate is infeasible, numerically unacceptable, or not economically better.
+\end{minipage}
+\end{table}

@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Data sets and experimental profiles used in the real-data experiments.}
+\label{tab:data_profile}
+\begin{tabularx}{\linewidth}{lYYY}
+\toprule
+Case & Raw source & Experimental profile & Scalar constraints \\
+\midrule
+M5 & 30,490 bottom-level item-store daily series over 1,941 days & 150 item-store series; 730 calibration days; 365 held-out days & 150 stockout constraints \\
+Power & RTS-GMLC hourly load, renewable forecast/actual, bus, generator, and branch data & 100 calibration residuals; 300 held-out residuals; 3 snapshots; 3 branches & $3 \times 3 \times 2 = 18$ line-flow constraints \\
+French & Kenneth French 49 industry daily return portfolios & 49 industries; 1,500 calibration trading days; 1,000 held-out trading days & 49 industry margin constraints \\
+\bottomrule
+\end{tabularx}
+\vspace{2pt}
+\begin{minipage}{.98\linewidth}
+\footnotesize \textit{Note.} The experimental profile gives the subset and chronological split used by the optimization and evaluation code. The scalar-constraint column reports the number of individual constraints after Bonferroni decomposition.
+\end{minipage}
+\end{table}

@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Calibration-only profile recommendations. Held-out values are reported for audit but not used for selection.}
+\label{tab:profile_recommendations}
+\begin{tabularx}{\linewidth}{llY}
+\toprule
+Case & Recommended profile & Decision \\
+\midrule
+French & current\_main & keep\_current\_main \\
+M5 & m5\_stable\_180d & candidate\_can\_be\_promoted\_after\_manual\_review \\
+Power & power\_original\_balanced & candidate\_can\_be\_promoted\_after\_manual\_review \\
+\bottomrule
+\end{tabularx}
+\vspace{2pt}
+\begin{minipage}{.98\linewidth}
+\footnotesize \textit{Note.} Recommendations are based on calibration-designed criteria. Held-out quantities are shown only to audit robustness after profile selection.
+\end{minipage}
+\end{table}
